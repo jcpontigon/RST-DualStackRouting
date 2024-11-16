@@ -233,15 +233,15 @@ end
 config t
 router bgp 2
 bgp log-neighbor-changes
-n_______ __._._._ ______-__ __
-n_______ __._._._ ______-__ __
-n_______ __._._._ remote-as _
-n_______ ___._._._ ______-__ _
-n______ ___._._._ mask ___.___.___._
-n______ __.__.__.__ mask 255.255.255.255
-n______ __._._._ ____ ___.___.___._
-n______ __._._._ ____ ___.___.___._
-n______ __._._._ ____ ___.___.___._
+neighbor 25.2.5.5 remote-as 45
+neighbor 24.2.4.4 remote-as 45
+neighbor 32.3.2.3 remote-as 3
+neighbor 207.7.7.1 remote-as 1
+network 25.2.5.0 mask 255.255.255.0
+network 22.22.22.22 mask 255.255.255.255
+network 24.2.4.0 mask 255.255.255.0
+network 32.3.2.0 mask 255.255.255.0
+network 207.7.7.0 mask 255.255.255.0
 !PretendInternet
 network 0.0.0.0
 ip route 0.0.0.0 0.0.0.0 null 0
